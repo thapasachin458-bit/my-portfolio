@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sachin Thapa — IT Enthusiast & Powerlifter</title>
+  <meta name="description" content="Personal portfolio of Sachin Thapa — IT enthusiast, competitive powerlifter, and bachelor's degree student.">
+  <meta name="keywords" content="Sachin Thapa, IT, powerlifting, portfolio, developer, athlete">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* ── Athletic Journey Section ── */
+    .athletic-section {
+      background-color: var(--background-color);
+      padding: 80px 0;
+    }
+    .lift-card {
+      background-color: var(--surface-color);
+      border-radius: 12px;
+      padding: 30px 24px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+    }
+    .lift-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(255,77,79,0.15);
+    }
+    .lift-card .lift-icon {
+      font-size: 2.4rem;
+      color: var(--accent-color);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .lift-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .lift-card .lift-stat {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--accent-color);
+      display: block;
+      line-height: 1.1;
+    }
+    .lift-card p {
+      font-size: 0.85rem;
+      color: var(--default-color);
+      margin-top: 8px;
+      opacity: 0.75;
+    }
+    .milestone-badge {
+      display: inline-block;
+      background: rgba(255,77,79,0.12);
+      color: var(--accent-color);
+      border: 1px solid rgba(255,77,79,0.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    /* ── Blog Section ── */
+    .blog-section {
+      background-color: var(--background-color);
+      padding: 80px 0;
+    }
+    .blog-card {
+      background-color: var(--surface-color);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 36px rgba(255,77,79,0.15);
+    }
+    .blog-card-header {
+      background: linear-gradient(135deg, rgba(255,77,79,0.18) 0%, rgba(28,28,28,0.9) 100%);
+      padding: 32px 28px 24px;
+      position: relative;
+    }
+    .blog-card-header .blog-category-badge {
+      display: inline-block;
+      background: var(--accent-color);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .blog-card-header h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.4;
+      color: #fff;
+    }
+    .blog-card-body {
+      padding: 24px 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-body .blog-meta {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      opacity: 0.65;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .blog-card-body .blog-meta span {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .blog-card-body p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      opacity: 0.82;
+      flex: 1;
+    }
+    .blog-card-footer {
+      padding: 0 28px 26px;
+    }
+    .blog-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-color);
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.25s, gap 0.25s;
+    }
+    .blog-read-more:hover {
+      background: color-mix(in srgb, var(--accent-color), #000 15%);
+      color: #fff;
+      gap: 12px;
+    }
+    .blog-session-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      border: 1px solid rgba(255,77,79,0.35);
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 10px;
+    }
+    .blog-cta-box {
+      background: linear-gradient(135deg, rgba(255,77,79,0.1) 0%, rgba(28,28,28,0) 80%);
+      border: 1px solid rgba(255,77,79,0.2);
+      border-radius: 14px;
+      padding: 36px 40px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .blog-cta-box h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .blog-cta-box p {
+      font-size: 0.95rem;
+      opacity: 0.78;
+      margin-bottom: 22px;
+    }
+    .blog-cta-box .btn-blog-full {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent-color);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.97rem;
+      padding: 13px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.25s, gap 0.25s;
+    }
+    .blog-cta-box .btn-blog-full:hover {
+      background: color-mix(in srgb, var(--accent-color), #000 15%);
+      color: #fff;
+      gap: 14px;
+    }
+    /* ── Dual-passion banner ── */
+    .dual-passion-strip {
+      background: linear-gradient(135deg, rgba(255,77,79,0.08) 0%, rgba(28,28,28,0) 60%);
+      border-left: 4px solid var(--accent-color);
+      padding: 18px 24px;
+      border-radius: 8px;
+      margin-top: 24px;
+    }
+    .dual-passion-strip p {
+      margin: 0;
+      font-style: italic;
+      font-size: 0.97rem;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">Sachin Thapa</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#services">Skills</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#athletic">Powerlifting</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- ══════════════════════════════════════
+         HERO SECTION
+    ══════════════════════════════════════ -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/profile/profile-bg-5.webp" alt="Sachin Thapa hero background" data-aos="fade-in">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-9 text-center">
+            <h2>Hi, I'm Sachin Thapa</h2>
+            <p>I'm a
+              <span class="typed" data-typed-items="IT Enthusiast, Competitive Powerlifter, Bachelor's Student, Tech Builder, Lifter of Iron &amp; Ideas"></span>
+              <span class="typed-cursor" aria-hidden="true"></span>
+            </p>
+            <p class="mt-3" style="font-size:1.05rem; opacity:0.8; max-width:620px; margin:auto;">
+              Bridging the worlds of technology and raw strength — building smart systems by day, breaking personal records by night.
+            </p>
+            <div class="social-links mt-4">
+              <a href="https://www.facebook.com/share/1BeWpbsXoF/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/sach.thevicious" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="mailto:thapasachin458@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+              <a href="tel:9749385283" aria-label="Phone"><i class="bi bi-telephone"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- ══════════════════════════════════════
+         ABOUT SECTION
+    ══════════════════════════════════════ -->
+    <section id="about" class="about section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">About Me</span>
+        <h2>About Me</h2>
+        <p>Discipline forged under the barbell. Curiosity sharpened at the keyboard. 9–10 academic IT projects built. 4 competitions entered. 4 podiums earned. Two worlds, one relentless drive.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+          <!-- Profile Card -->
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="150">
+            <div class="profile-card">
+              <div class="profile-header">
+                <div class="profile-avatar">
+                  <img src="assets/img/profile/profile-square-3.webp" class="img-fluid" alt="Sachin Thapa profile photo">
+                  <div class="status-indicator"></div>
+                </div>
+                <h3>Sachin Thapa</h3>
+                <span class="role">IT Enthusiast &amp; Powerlifter</span>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <span>Driven</span>
+                </div>
+              </div>
+
+              <div class="profile-stats">
+                <div class="stat-item">
+                  <h4>9–10</h4>
+                  <p>Projects</p>
+                </div>
+                <div class="stat-item">
+                  <h4>4/4</h4>
+                  <p>Podiums</p>
+                </div>
+                <div class="stat-item">
+                  <h4>7+</h4>
+                  <p>Yrs Coaching</p>
+                </div>
+              </div>
+
+              <div class="profile-actions">
+                <a href="resume.html" class="btn-primary"><i class="bi bi-file-person"></i> View Resume</a>
+                <a href="#contact" class="btn-secondary"><i class="bi bi-envelope"></i> Contact</a>
+              </div>
+
+              <div class="social-connect">
+                <a href="https://www.facebook.com/share/1BeWpbsXoF/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/sach.thevicious" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="mailto:thapasachin458@gmail.com" aria-label="Email Sachin"><i class="bi bi-envelope"></i></a>
+                <a href="tel:9749385283" aria-label="Call Sachin"><i class="bi bi-telephone"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bio & Skills -->
+          <div class="col-lg-8" data-aos="fade-left" data-aos-delay="200">
+            <div class="content-wrapper">
+              <div class="bio-section">
+                <div class="section-tag">Who I Am</div>
+                <h2>Where Code Meets Iron</h2>
+                <p>
+                  I'm Sachin Thapa — a bachelor's degree student with a passion for information technology and an unwavering commitment to competitive powerlifting. To me, both fields are driven by the same principle: <em>progressive overload</em>. In the gym, that means adding weight to the bar — I've built my total to <strong>602.5 kg</strong> (232.5 squat / 125 bench / 245 deadlift). In tech, it means constantly leveling up my skills, tackling harder problems, and shipping better solutions.
+                </p>
+                <p>
+                  I've completed <strong>9–10 academic IT projects</strong> across networking, web development, databases, and more. Outside the screen, I compete in powerlifting — stepping on the platform for the first time in 2024 and earning a podium finish in <strong>all 4 competitions entered</strong> so far. That 100% podium rate isn't luck — it's the result of structure, preparation, and refusing to leave anything on the table.
+                </p>
+                <div class="dual-passion-strip">
+                  <p>"The same mindset that keeps me under the bar when it gets heavy is what keeps me debugging at 2 AM. Discipline isn't a switch — it's a lifestyle."</p>
+                </div>
+              </div>
+
+              <div class="details-grid mt-4">
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="250">
+                  <i class="bi bi-mortarboard"></i>
+                  <div class="detail-content">
+                    <span>Degree</span>
+                    <strong>Bachelor of Information Technology</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-trophy"></i>
+                  <div class="detail-content">
+                    <span>Sport</span>
+                    <strong>Competitive Powerlifting</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="350">
+                  <i class="bi bi-geo-alt"></i>
+                  <div class="detail-content">
+                    <span>Based In</span>
+                    <strong>Butwal, Rupandehi, Nepal</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bi bi-envelope"></i>
+                  <div class="detail-content">
+                    <span>Email</span>
+                    <strong>thapasachin458@gmail.com</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="150">
+                  <i class="bi bi-phone"></i>
+                  <div class="detail-content">
+                    <span>Phone</span>
+                    <strong>+977 9749385283</strong>
+                  </div>
+                </div>
+
+                <div class="detail-item" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-calendar-check"></i>
+                  <div class="detail-content">
+                    <span>Status</span>
+                    <strong>Open to Opportunities</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-showcase mt-4" data-aos="fade-up" data-aos-delay="250">
+                <div class="section-tag">Core IT Skills</div>
+                <h3>Technical Proficiency</h3>
+
+                <div class="skills-list skills-animation">
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">[Programming Language / Framework]</span>
+                      <span class="skill-percent">[X]%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">[Networking / System Administration]</span>
+                      <span class="skill-percent">[X]%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">[Database / Cloud Technology]</span>
+                      <span class="skill-percent">[X]%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">[Web Development Stack]</span>
+                      <span class="skill-percent">[X]%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">[Cybersecurity / IT Support]</span>
+                      <span class="skill-percent">[X]%</span>
+                    </div>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- ══════════════════════════════════════
+         RESUME SECTION
+    ══════════════════════════════════════ -->
+    <section id="resume" class="resume section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Resume</span>
+        <h2>Resume</h2>
+        <p>A snapshot of where I've been, what I've learned, and the credentials I'm building — both in the classroom and in the field.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+          <!-- Experience -->
+          <div class="col-lg-6">
+            <div class="experience-section">
+              <div class="section-header" data-aos="fade-right" data-aos-delay="200">
+                <div class="header-content">
+                  <span class="section-badge">Experience</span>
+                  <h2>Professional Journey</h2>
+                  <p>Hands-on experiences that have shaped my understanding of real-world IT and technology.</p>
+                </div>
+              </div>
+
+              <div class="experience-cards">
+                <div class="exp-card featured" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="card-header">
+                    <div class="company-logo">
+                      <i class="bi bi-buildings"></i>
+                    </div>
+                    <div class="period-badge">Current</div>
+                  </div>
+                  <div class="card-body">
+                    <h3>[Current Role / Internship Title]</h3>
+                    <p class="company-name">[Company / Organisation Name]</p>
+                    <span class="duration">[Start Year] – Present</span>
+                    <p class="description">[Brief description of responsibilities and what you built or learned here.]</p>
+                    <div class="skills-tags">
+                      <span class="skill-tag">[Skill]</span>
+                      <span class="skill-tag">[Skill]</span>
+                      <span class="skill-tag">[Skill]</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="exp-card" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="card-header">
+                    <div class="company-logo">
+                      <i class="bi bi-laptop"></i>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h3>[Previous Role / Project]</h3>
+                    <p class="company-name">[Company / Institution]</p>
+                    <span class="duration">[Year] – [Year]</span>
+                    <p class="description">[Brief description of the role or contribution.]</p>
+                  </div>
+                </div>
+
+                <div class="exp-card" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="card-header">
+                    <div class="company-logo">
+                      <i class="bi bi-code-slash"></i>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h3>[Freelance / Volunteer / Academic Project]</h3>
+                    <p class="company-name">[Context / Platform]</p>
+                    <span class="duration">[Year]</span>
+                    <p class="description">[What you built, managed, or contributed to.]</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="col-lg-6">
+            <div class="education-section">
+              <div class="section-header" data-aos="fade-left" data-aos-delay="200">
+                <div class="header-content">
+                  <span class="section-badge">Education</span>
+                  <h2>Academic Background</h2>
+                  <p>Building a strong academic foundation to support a career at the cutting edge of technology.</p>
+                </div>
+              </div>
+
+              <div class="education-timeline" data-aos="fade-left" data-aos-delay="300">
+                <div class="timeline-track">
+                  <div class="timeline-item">
+                    <div class="timeline-marker">
+                      <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <div class="education-meta">
+                        <span class="year-range">[Start Year] – Present</span>
+                        <span class="degree-level">Bachelor's</span>
+                      </div>
+                      <h4>Bachelor of Information Technology</h4>
+                      <p class="institution">[UNIVERSITY_NAME] — Butwal, Nepal</p>
+                      <p class="description">Studying core IT concepts including networking, programming, databases, web technologies, cybersecurity fundamentals, and system analysis with a focus on practical, real-world application.</p>
+                      <div class="achievement">
+                        <i class="bi bi-award"></i>
+                        <span>Currently Pursuing</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker">
+                      <i class="bi bi-book"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <div class="education-meta">
+                        <span class="year-range">[Year] – [Year]</span>
+                        <span class="degree-level">+2 / Higher Secondary</span>
+                      </div>
+                      <h4>[Science / Management / Other] Stream</h4>
+                      <p class="institution">[SCHOOL_NAME] — Butwal, Nepal</p>
+                      <p class="description">[Brief note about stream or any noteworthy academic achievement.]</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker">
+                      <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <div class="education-meta">
+                        <span class="year-range">[Year] – Present</span>
+                        <span class="degree-level">Certificates</span>
+                      </div>
+                      <h4>Professional Certifications</h4>
+                      <div class="certifications-list">
+                        <div class="cert-item">
+                          <span class="cert-name">[Certification Name, e.g. CCNA / CompTIA A+]</span>
+                          <span class="cert-year">[Year]</span>
+                        </div>
+                        <div class="cert-item">
+                          <span class="cert-name">[Certification Name]</span>
+                          <span class="cert-year">[Year]</span>
+                        </div>
+                        <div class="cert-item">
+                          <span class="cert-name">[Online Course / Platform Certificate]</span>
+                          <span class="cert-year">[Year]</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Resume Section -->
+
+    <!-- ══════════════════════════════════════
+         SKILLS / SERVICES SECTION
+    ══════════════════════════════════════ -->
+    <section id="services" class="services section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">What I Do</span>
+        <h2>Skills &amp; Services</h2>
+        <p>A blend of technical capabilities I've developed through coursework, self-study, and hands-on projects.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h4>Web Development</h4>
+              <p>Building responsive, functional websites and web apps using modern tools and frameworks.</p>
+              <a href="#portfolio" class="read-more">
+                <span>See Projects</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item featured">
+              <div class="featured-tag">Featured</div>
+              <div class="icon-wrapper">
+                <i class="bi bi-hdd-network"></i>
+              </div>
+              <h4>Networking &amp; IT Support</h4>
+              <p>Configuring, troubleshooting, and managing network infrastructure with a methodical, problem-solver's mindset.</p>
+              <a href="#contact" class="read-more">
+                <span>Let's Talk</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-database"></i>
+              </div>
+              <h4>Database Management</h4>
+              <p>Designing and querying databases to support clean, efficient data-driven applications.</p>
+              <a href="#portfolio" class="read-more">
+                <span>See Projects</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4>Cybersecurity Fundamentals</h4>
+              <p>Understanding threats, vulnerabilities, and best practices to build and maintain secure systems.</p>
+              <a href="#contact" class="read-more">
+                <span>Get in Touch</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="service-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-terminal"></i>
+              </div>
+              <h4>Scripting &amp; Automation</h4>
+              <p>Writing scripts to automate repetitive tasks and improve workflow efficiency.</p>
+              <a href="#portfolio" class="read-more">
+                <span>See Projects</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-cloud-upload"></i>
+              </div>
+              <h4>Cloud &amp; Hosting</h4>
+              <p>Deploying and managing applications on cloud platforms with an eye on performance and cost.</p>
+              <a href="#portfolio" class="read-more">
+                <span>See Projects</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-people"></i>
+              </div>
+              <h4>Tech Consulting</h4>
+              <p>Helping individuals and small teams choose the right tech stack and solve practical IT problems.</p>
+              <a href="#contact" class="read-more">
+                <span>Let's Talk</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-bar-chart-line"></i>
+              </div>
+              <h4>Data Analysis</h4>
+              <p>Turning raw data into clear, actionable insights using analytical tools and structured thinking.</p>
+              <a href="#contact" class="read-more">
+                <span>Get in Touch</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="cta-box">
+              <div class="row align-items-center">
+                <div class="col-lg-8">
+                  <h3>Got a project or an idea? Let's build it.</h3>
+                  <p>Whether you need a tech solution, a collaborator, or just someone to bounce ideas off — I'm up for it.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end text-center">
+                  <a href="#contact" class="cta-btn">Get in Touch</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Skills & Services Section -->
+
+    <!-- ══════════════════════════════════════
+         PROJECTS / PORTFOLIO SECTION
+    ══════════════════════════════════════ -->
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">My Work</span>
+        <h2>Projects</h2>
+        <p>A collection of IT projects and technical work I've built, shipped, or contributed to — each one a problem solved and a skill sharpened.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+            <li data-filter="*" class="filter-active">All Projects</li>
+            <li data-filter=".filter-web">Web</li>
+            <li data-filter=".filter-networking">Networking</li>
+            <li data-filter=".filter-data">Data</li>
+            <li data-filter=".filter-other">Other</li>
+          </ul>
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="assets/img/portfolio/portfolio-1.webp" alt="[Project 1 Name]" class="img-fluid" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">Web Development</span>
+                      <h4>[Project 1 Title]</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox portfolio-link">
+                        <i class="bi bi-plus-lg"></i>
+                      </a>
+                      <a href="portfolio-details.html" class="portfolio-details">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">[Tech Stack]</span>
+                    <span class="tag">[Tech Stack]</span>
+                  </div>
+                  <div class="project-year">[Year]</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-networking">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="assets/img/portfolio/portfolio-2.webp" alt="[Project 2 Name]" class="img-fluid" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">Networking</span>
+                      <h4>[Project 2 Title]</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox portfolio-link">
+                        <i class="bi bi-plus-lg"></i>
+                      </a>
+                      <a href="portfolio-details.html" class="portfolio-details">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">[Tech]</span>
+                    <span class="tag">[Tech]</span>
+                  </div>
+                  <div class="project-year">[Year]</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-data">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="assets/img/portfolio/portfolio-3.webp" alt="[Project 3 Name]" class="img-fluid" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">Data Analysis</span>
+                      <h4>[Project 3 Title]</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox portfolio-link">
+                        <i class="bi bi-plus-lg"></i>
+                      </a>
+                      <a href="portfolio-details.html" class="portfolio-details">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">[Tool]</span>
+                    <span class="tag">[Language]</span>
+                  </div>
+                  <div class="project-year">[Year]</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="assets/img/portfolio/portfolio-4.webp" alt="[Project 4 Name]" class="img-fluid" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">Web Development</span>
+                      <h4>[Project 4 Title]</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox portfolio-link">
+                        <i class="bi bi-plus-lg"></i>
+                      </a>
+                      <a href="portfolio-details.html" class="portfolio-details">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">[Tech]</span>
+                    <span class="tag">[Tech]</span>
+                  </div>
+                  <div class="project-year">[Year]</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-other">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="assets/img/portfolio/portfolio-5.webp" alt="[Project 5 Name]" class="img-fluid" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">Academic / Research</span>
+                      <h4>[Project 5 Title]</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox portfolio-link">
+                        <i class="bi bi-plus-lg"></i>
+                      </a>
+                      <a href="portfolio-details.html" class="portfolio-details">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">[Topic]</span>
+                    <span class="tag">[Tool]</span>
+                  </div>
+                  <div class="project-year">[Year]</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-networking">
+              <div class="portfolio-card">
+                <div class="portfolio-image-container">
+                  <img src="assets/img/portfolio/portfolio-6.webp" alt="[Project 6 Name]" class="img-fluid" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                      <span class="project-category">IT Infrastructure</span>
+                      <h4>[Project 6 Title]</h4>
+                    </div>
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox portfolio-link">
+                        <i class="bi bi-plus-lg"></i>
+                      </a>
+                      <a href="portfolio-details.html" class="portfolio-details">
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-meta">
+                  <div class="project-tags">
+                    <span class="tag">[Tech]</span>
+                    <span class="tag">[Tech]</span>
+                  </div>
+                  <div class="project-year">[Year]</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="portfolio-bottom" data-aos="fade-up" data-aos-delay="400">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h3>Interested in collaborating?</h3>
+              <p>I'm always open to new projects, learning opportunities, and building things that matter.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#contact" class="btn btn-accent">Let's Work Together</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Projects Section -->
+
+    <!-- ══════════════════════════════════════
+         ATHLETIC JOURNEY SECTION
+    ══════════════════════════════════════ -->
+    <section id="athletic" class="athletic-section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">The Iron Game</span>
+        <h2>Athletic Journey</h2>
+        <p>Powerlifting isn't just a hobby — it's a second school. Every meet teaches discipline, every PR teaches belief, and every failed rep teaches humility.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Current PRs / Stats -->
+        <div class="row gy-4 mb-5">
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="lift-card">
+              <span class="lift-icon"><i class="bi bi-arrow-down-circle-fill"></i></span>
+              <h4>Squat PR</h4>
+              <span class="lift-stat">232.5 kg</span>
+              <p>Back Squat — Competition Best</p>
+              <span class="milestone-badge">Personal Record</span>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="lift-card">
+              <span class="lift-icon"><i class="bi bi-lightning-charge-fill"></i></span>
+              <h4>Bench Press PR</h4>
+              <span class="lift-stat">125 kg</span>
+              <p>Flat Bench — Competition Best</p>
+              <span class="milestone-badge">Personal Record</span>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="lift-card">
+              <span class="lift-icon"><i class="bi bi-trophy-fill"></i></span>
+              <h4>Deadlift PR</h4>
+              <span class="lift-stat">245 kg</span>
+              <p>Conventional — Competition Best</p>
+              <span class="milestone-badge">Personal Record</span>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="lift-card">
+              <span class="lift-icon"><i class="bi bi-bar-chart-fill"></i></span>
+              <h4>Total</h4>
+              <span class="lift-stat">602.5 kg</span>
+              <p>Best competition total — [Weight Class]</p>
+              <span class="milestone-badge">Competition Total</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Competition History -->
+        <div class="row gy-4">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="education-section">
+              <div class="section-header">
+                <div class="header-content">
+                  <span class="section-badge">Competition History</span>
+                  <h2>Meet Results &amp; Milestones</h2>
+                  <p>Every competition is a checkpoint — a chance to see how far the work has taken me.</p>
+                </div>
+              </div>
+              <div class="education-timeline">
+                <div class="timeline-track">
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker">
+                      <i class="bi bi-trophy-fill"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <div class="education-meta">
+                        <span class="year-range">[Year]</span>
+                        <span class="degree-level">[Weight Class] kg</span>
+                      </div>
+                      <h4>[Competition 4 — Most Recent]</h4>
+                      <p class="institution">[Organising Body / Federation], Nepal</p>
+                      <p class="description">Squat: 232.5 kg &nbsp;|&nbsp; Bench: 125 kg &nbsp;|&nbsp; Deadlift: 245 kg &nbsp;|&nbsp; Total: 602.5 kg</p>
+                      <div class="achievement">
+                        <i class="bi bi-award"></i>
+                        <span>[Placement] — Podium Finish</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker">
+                      <i class="bi bi-award"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <div class="education-meta">
+                        <span class="year-range">[Year]</span>
+                        <span class="degree-level">[Weight Class] kg</span>
+                      </div>
+                      <h4>[Competition 3]</h4>
+                      <p class="institution">[Organising Body / Federation], Nepal</p>
+                      <p class="description">Total: [X] kg &nbsp;|&nbsp; Squat: [X] kg &nbsp;|&nbsp; Bench: [X] kg &nbsp;|&nbsp; Deadlift: [X] kg</p>
+                      <div class="achievement">
+                        <i class="bi bi-award"></i>
+                        <span>[Placement] — Podium Finish</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker">
+                      <i class="bi bi-award"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <div class="education-meta">
+                        <span class="year-range">[Year]</span>
+                        <span class="degree-level">[Weight Class] kg</span>
+                      </div>
+                      <h4>[Competition 2]</h4>
+                      <p class="institution">[Organising Body / Federation], Nepal</p>
+                      <p class="description">Total: [X] kg &nbsp;|&nbsp; Squat: [X] kg &nbsp;|&nbsp; Bench: [X] kg &nbsp;|&nbsp; Deadlift: [X] kg</p>
+                      <div class="achievement">
+                        <i class="bi bi-award"></i>
+                        <span>[Placement] — Podium Finish</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker">
+                      <i class="bi bi-calendar-event"></i>
+                    </div>
+                    <div class="timeline-content">
+                      <div class="education-meta">
+                        <span class="year-range">2024</span>
+                        <span class="degree-level">Debut</span>
+                      </div>
+                      <h4>[Debut Competition — Competition 1]</h4>
+                      <p class="institution">[Location / Organisation]</p>
+                      <p class="description">Stepped on the platform for the first time and immediately secured a podium — setting the tone for every meet that followed.</p>
+                      <div class="achievement">
+                        <i class="bi bi-star-fill"></i>
+                        <span>Debut Competition — Podium Finish</span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Athletic Journey Section -->
+
+    <!-- ══════════════════════════════════════
+         BLOG SECTION
+    ══════════════════════════════════════ -->
+    <section id="blog" class="blog-section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">My Blog</span>
+        <h2>Blog</h2>
+        <p>Reflections, learning journals, and project write-ups — documenting the process behind the work, one session at a time.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <!-- CET257 Blog Card -->
+          <div class="col-lg-6 col-md-10 mx-auto" data-aos="zoom-in" data-aos-delay="150">
+            <div class="blog-card">
+              <div class="blog-card-header">
+                <span class="blog-session-label"><i class="bi bi-journal-bookmark-fill"></i> Session Blog</span>
+                <span class="blog-category-badge">CET257 Enterprise Project</span>
+                <h3>Hazard Hunt 360 — Individual Reflection &amp; Weekly Session Journal</h3>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta">
+                  <span><i class="bi bi-person"></i> Sachin Thapa</span>
+                  <span><i class="bi bi-tag"></i> Team 14 | Team Muse</span>
+                  <span><i class="bi bi-calendar3"></i> 2026</span>
+                </div>
+                <p>
+                  A twelve-week learning journal documenting my role as 3D Graphics Designer on the Hazard Hunt 360 warehouse hazard-perception prototype. Each session entry covers what I worked on, the challenges I encountered, how the team responded to client feedback, and what I learned about enterprise software delivery — from asset creation and version control to account authentication and frontend/backend coordination.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="milestone-badge"><i class="bi bi-badge-3d"></i> 3D Graphics Design</span>
+                  <span class="milestone-badge"><i class="bi bi-people"></i> Team Collaboration</span>
+                  <span class="milestone-badge"><i class="bi bi-node-plus"></i> Node.js</span>
+                  <span class="milestone-badge"><i class="bi bi-book"></i> 12 Weekly Entries</span>
+                </div>
+              </div>
+              <div class="blog-card-footer">
+                <a href="https://Cet257.illuu.org" target="_blank" rel="noopener" class="blog-read-more">
+                  <i class="bi bi-box-arrow-up-right"></i> Read Full Blog
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA redirect to full blog -->
+        <div class="blog-cta-box" data-aos="fade-up" data-aos-delay="250">
+          <h3>View My Full Session Blog</h3>
+          <p>All twelve weekly journal entries for CET257 are published on my Canvas portfolio. Click below to read the complete blog with detailed session notes, evidence, and reflections.</p>
+          <a href="https://Cet257.illuu.org" target="_blank" rel="noopener" class="btn-blog-full">
+            <i class="bi bi-journal-text"></i> Visit Cet257.illuu.org
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section><!-- /Blog Section -->
+
+    <!-- ══════════════════════════════════════
+         CONTACT SECTION
+    ══════════════════════════════════════ -->
+    <section id="contact" class="contact section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Let's Connect</span>
+        <h2>Contact</h2>
+        <p>Whether it's a tech project, a collaboration, or just a conversation about lifting and code — my inbox is open.</p>
+      </div>
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div>
+                <h3>Call Me</h3>
+                <p>+977 9749385283</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div>
+                <h3>Email Me</h3>
+                <p>thapasachin458@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div>
+                <h3>Instagram</h3>
+                <p><a href="https://www.instagram.com/sach.thevicious" target="_blank" rel="noopener">@sach.thevicious</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="icon-wrapper">
+                <i class="bi bi-facebook"></i>
+              </div>
+              <div>
+                <h3>Facebook</h3>
+                <p><a href="https://www.facebook.com/share/1BeWpbsXoF/?mibextid=wwXIfr" target="_blank" rel="noopener">Sachin Thapa</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Sachin Thapa</span>
+          </a>
+          <p>IT Enthusiast. Competitive Powerlifter. Bachelor's Degree Student. Building systems, breaking barriers — one commit and one rep at a time.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.facebook.com/share/1BeWpbsXoF/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/sach.thevicious" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="mailto:thapasachin458@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            <a href="tel:9749385283" aria-label="Phone"><i class="bi bi-telephone"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#athletic">Powerlifting</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Areas</h4>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Networking</a></li>
+            <li><a href="#services">Cybersecurity</a></li>
+            <li><a href="#services">Data Analysis</a></li>
+            <li><a href="#services">IT Support</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Get in Touch</h4>
+          <p>Butwal, Rupandehi, Nepal</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+977 9749385283</span></p>
+          <p><strong>Email:</strong> <span>thapasachin458@gmail.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2026</span> <strong class="px-1 sitename">Sachin Thapa</strong> — All Rights Reserved</p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
